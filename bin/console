@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+
+require "bundler/setup"
+require "dry/web/cli"
+
+require_relative "../core/boot"
+
+Dry::Web::Cli.start

@@ -1,0 +1,186 @@
+GIT
+  remote: git://github.com/dry-rb/dry-web.git
+  revision: e561c5f80634deee446ddd1b8b4140e93b5a1ca3
+  specs:
+    dry-web (0.1.0)
+      dry-component (~> 0)
+      dry-configurable (~> 0.1)
+      dry-equalizer (~> 0.2)
+      dry-transaction (~> 0.5)
+      dry-view (~> 0.1)
+      inflecto (~> 0)
+      roda (~> 2.7)
+      tilt (~> 2.0)
+
+GIT
+  remote: git://github.com/dryrb/dry-auto_inject.git
+  revision: 57a51b06a3699f836b15ca98b565d1fbd5a56394
+  specs:
+    dry-auto_inject (0.3.0)
+      dry-container (~> 0.3.4)
+
+GIT
+  remote: git://github.com/dryrb/dry-component.git
+  revision: 0bebc656b625a18c25e3c8d9c4b71946fecac5e1
+  specs:
+    dry-component (0.0.2)
+      dry-auto_inject (~> 0.1)
+      dry-configurable (~> 0.1)
+      dry-container (~> 0.2, >= 0.2.7)
+      inflecto (>= 0.0.2)
+
+GIT
+  remote: git://github.com/dryrb/dry-validation.git
+  revision: fa557778ff0fbf8286eabeb17d72185284306328
+  specs:
+    dry-validation (0.7.4)
+      concurrent-ruby (~> 1.0)
+      dry-configurable (~> 0.1, >= 0.1.3)
+      dry-container (~> 0.2, >= 0.2.8)
+      dry-equalizer (~> 0.2)
+      dry-logic (~> 0.2, >= 0.2.3)
+      dry-types (~> 0.7, >= 0.7.2)
+
+GIT
+  remote: git://github.com/rom-rb/rom-mapper.git
+  revision: 386ad7049b9c46243889453d4bce7b44d05962e4
+  specs:
+    rom-mapper (0.3.0)
+      dry-equalizer (~> 0.2)
+      rom-support (~> 1.0.0)
+      transproc (~> 0.4.0)
+
+GIT
+  remote: git://github.com/rom-rb/rom-repository.git
+  revision: 37ec20210a66da4e4c36b2b72517743cc1776930
+  specs:
+    rom-repository (0.3.0)
+      anima (~> 0.2, >= 0.2)
+      concurrent-ruby (~> 1.0)
+      rom (~> 2.0)
+      rom-mapper (~> 0.3.0)
+      rom-support (~> 1.0.0)
+
+GIT
+  remote: git://github.com/rom-rb/rom-sql.git
+  revision: b9f75ee553a8bf74b78175181e8531c5684d3848
+  specs:
+    rom-sql (0.8.0)
+      dry-equalizer (~> 0.2)
+      dry-types (~> 0.7)
+      rom (~> 2.0)
+      sequel (~> 4.18)
+
+GIT
+  remote: git://github.com/rom-rb/rom-support.git
+  revision: 31085bb9a02a68455f2a66dce1fa08fcfd937430
+  specs:
+    rom-support (1.0.0)
+      dry-equalizer (~> 0.2)
+      transproc (~> 0.4.0)
+      wisper (~> 1.6, >= 1.6.0)
+
+GIT
+  remote: git://github.com/rom-rb/rom.git
+  revision: 9b30e3b516be12224148434c75ae1d9223fbfccb
+  specs:
+    rom (2.0.0)
+      dry-equalizer (~> 0.2)
+      dry-types (~> 0.7)
+      rom-mapper (~> 0.3.0)
+      rom-support (~> 1.0.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    abstract_type (0.0.7)
+    adamantium (0.2.0)
+      ice_nine (~> 0.11.0)
+      memoizable (~> 0.4.0)
+    anima (0.3.0)
+      abstract_type (~> 0.0.7)
+      adamantium (~> 0.2)
+      equalizer (~> 0.0.11)
+    concurrent-ruby (1.0.2)
+    database_cleaner (1.5.1)
+    diff-lcs (1.2.5)
+    dry-configurable (0.1.6)
+      concurrent-ruby (~> 1.0)
+    dry-container (0.3.4)
+      concurrent-ruby (~> 1.0)
+      dry-configurable (~> 0.1, >= 0.1.3)
+    dry-equalizer (0.2.0)
+    dry-logic (0.2.3)
+      dry-container (~> 0.2, >= 0.2.6)
+      dry-equalizer (~> 0.2)
+    dry-monads (0.0.1)
+    dry-transaction (0.6.0)
+      dry-container (>= 0.2.8)
+      kleisli
+      wisper (>= 1.6.0)
+    dry-types (0.7.2)
+      concurrent-ruby (~> 1.0)
+      dry-configurable (~> 0.1)
+      dry-container (~> 0.3)
+      dry-equalizer (~> 0.2)
+      dry-logic (~> 0.2, >= 0.2.3)
+      dry-monads (>= 0.0.1)
+      inflecto (~> 0.0.0, >= 0.0.2)
+    dry-view (0.1.0)
+      dry-configurable (~> 0.1)
+      dry-equalizer (~> 0.2)
+      inflecto (~> 0)
+      tilt (~> 2.0)
+    equalizer (0.0.11)
+    ice_nine (0.11.2)
+    inflecto (0.0.2)
+    kleisli (0.2.7)
+    memoizable (0.4.2)
+      thread_safe (~> 0.3, >= 0.3.1)
+    pg (0.18.4)
+    rack (1.6.4)
+    rack-test (0.6.3)
+      rack (>= 1.0)
+    rake (11.1.2)
+    roda (2.14.0)
+      rack
+    rspec (3.4.0)
+      rspec-core (~> 3.4.0)
+      rspec-expectations (~> 3.4.0)
+      rspec-mocks (~> 3.4.0)
+    rspec-core (3.4.4)
+      rspec-support (~> 3.4.0)
+    rspec-expectations (3.4.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.4.0)
+    rspec-mocks (3.4.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.4.0)
+    rspec-support (3.4.1)
+    sequel (4.35.0)
+    thread_safe (0.3.5)
+    tilt (2.0.5)
+    transproc (0.4.0)
+    wisper (1.6.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  database_cleaner
+  dry-auto_inject!
+  dry-component!
+  dry-validation!
+  dry-web!
+  pg
+  rack-test
+  rake
+  rom!
+  rom-mapper!
+  rom-repository!
+  rom-sql!
+  rom-support!
+  rspec
+
+BUNDLED WITH
+   1.11.2
