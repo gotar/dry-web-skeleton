@@ -1,6 +1,3 @@
-require_relative "../../../lib/commands/fetch_posts"
-require_relative "../../../lib/commands/create_post"
-
 class Blog::Application < Dry::Web::Application
   route "posts" do |r|
     r.is do
