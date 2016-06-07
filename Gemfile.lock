@@ -21,17 +21,17 @@ GIT
 
 GIT
   remote: git://github.com/dryrb/dry-component.git
-  revision: 0bebc656b625a18c25e3c8d9c4b71946fecac5e1
+  revision: 70578f062a04196ba57cdabbc7fcabaad14d9593
   specs:
-    dry-component (0.0.2)
-      dry-auto_inject (~> 0.1)
+    dry-component (0.1.0)
+      dry-auto_inject (~> 0.3)
       dry-configurable (~> 0.1)
-      dry-container (~> 0.2, >= 0.2.7)
+      dry-container (~> 0.3, >= 0.3.4)
       inflecto (>= 0.0.2)
 
 GIT
   remote: git://github.com/dryrb/dry-validation.git
-  revision: fa557778ff0fbf8286eabeb17d72185284306328
+  revision: 3e642eba5b42bfd776814f8e0ebe9728f25c4795
   specs:
     dry-validation (0.7.4)
       concurrent-ruby (~> 1.0)
@@ -102,7 +102,7 @@ GEM
       adamantium (~> 0.2)
       equalizer (~> 0.0.11)
     concurrent-ruby (1.0.2)
-    database_cleaner (1.5.1)
+    database_cleaner (1.5.3)
     diff-lcs (1.2.5)
     dry-configurable (0.1.6)
       concurrent-ruby (~> 1.0)
@@ -114,9 +114,9 @@ GEM
       dry-container (~> 0.2, >= 0.2.6)
       dry-equalizer (~> 0.2)
     dry-monads (0.0.1)
-    dry-transaction (0.6.0)
+    dry-transaction (0.7.0)
       dry-container (>= 0.2.8)
-      kleisli
+      dry-monads (~> 0.0.1)
       wisper (>= 1.6.0)
     dry-types (0.7.2)
       concurrent-ruby (~> 1.0)
@@ -134,7 +134,6 @@ GEM
     equalizer (0.0.11)
     ice_nine (0.11.2)
     inflecto (0.0.2)
-    kleisli (0.2.7)
     memoizable (0.4.2)
       thread_safe (~> 0.3, >= 0.3.1)
     pg (0.18.4)

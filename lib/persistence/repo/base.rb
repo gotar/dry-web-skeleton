@@ -6,16 +6,8 @@ Blog::Container.boot!(:rom)
 
 module Persistence
   module Repo
-    class Base < ROM::Repository
-      def self.inherited(base)
-        base.class_eval do
-          include Blog::ArgsImport["persistence.rom"]
-
-          def self.root
-            self.to_s.downcase.split('::').last.to_sym
-          end
-        end
-      end
+    class Base < ROM::Repository::Root
+      include Blog::Import.args["persistence.rom"]
     end
   end
 end

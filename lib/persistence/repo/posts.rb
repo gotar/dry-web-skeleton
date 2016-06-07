@@ -2,8 +2,7 @@ require_relative "base"
 
 module Persistence
   module Repo
-    class Posts < Base
-      relations :posts
+    class Posts < Base[:posts]
       commands :create
 
       def index
