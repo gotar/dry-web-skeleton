@@ -3,7 +3,7 @@ require_relative "base"
 module Persistence
   module Repo
     class Posts < Base[:posts]
-      commands :create
+      commands :create, :update, :delete
 
       def show(id)
         posts.by_id(id).one!

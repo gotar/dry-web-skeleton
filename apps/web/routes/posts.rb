@@ -15,6 +15,14 @@ class Blog::Application < Dry::Web::Application
       r.get do
         Blog::Container['commands.fetch_post'].call(id).to_h
       end
+
+      r.put do
+        Blog::Container['commands.update_post'].call(id, r.params).to_h
+      end
+
+      r.delete do
+        Blog::Container['commands.delete_post'].call(id).to_h
+      end
     end
   end
 end
