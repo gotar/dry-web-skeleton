@@ -1,6 +1,8 @@
 require 'web_helper'
 
 RSpec.describe "POST /posts ", type: :request do
+  include_context "posts"
+
   context "invalid params" do
     before { do_request(title: "") }
 
@@ -34,6 +36,12 @@ RSpec.describe "POST /posts ", type: :request do
       expect(r['id']).to_not be_nil
       expect(r['title']).to eql(base_params[:title])
       expect(r['body']).to eql(base_params[:body])
+    end
+
+    it 'increase number of records in db' do
+      expect {
+        do_request
+      }.to change{ count_posts }.by(1)
     end
   end
 

@@ -5,7 +5,7 @@ module Commands
     include Blog::Import('persistence.repo.posts')
 
     def call(id)
-      posts.delete
+      posts.delete(id)
     end
   end
 end

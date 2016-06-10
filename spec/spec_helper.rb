@@ -2,7 +2,7 @@ ENV["RACK_ENV"] = "test"
 
 SPEC_ROOT = Pathname(__FILE__).dirname
 Dir[SPEC_ROOT.join("support/*.rb").to_s].each(&method(:require))
-Dir[SPEC_ROOT.join("factory/*.rb").to_s].each(&method(:require))
+Dir[SPEC_ROOT.join("shared/*.rb").to_s].each(&method(:require))
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|

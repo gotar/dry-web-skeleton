@@ -8,7 +8,7 @@ module Commands
       result = post_validator.call(params)
 
       if result.success?
-        posts.update(result.output)
+        posts.update(id, result.output)
       else
         raise Blog::InvalidParams.new(result.messages.to_json)
       end
