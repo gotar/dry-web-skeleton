@@ -8,6 +8,7 @@ module Persistence
       def show(id)
         posts.by_id(id).one!
       end
+      alias :[] :show
 
       def index
         posts.to_a
