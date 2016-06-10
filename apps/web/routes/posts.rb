@@ -11,17 +11,26 @@ class Blog::Application < Dry::Web::Application
       end
     end
 
-    r.is :id do |id|
-      r.get do
-        Blog::Container['commands.fetch_post'].call(id).to_h
+    r.on :id do |id|
+      r.is do
+        r.get do
+          Blog::Container['commands.fetch_post'].call(id).to_h
+        end
+
+        r.put do
+          Blog::Container['commands.update_post'].call(id, r.params).to_h
+        end
+
+        r.delete do
+          Blog::Container['commands.delete_post'].call(id).to_h
+        end
       end
 
-      r.put do
-        Blog::Container['commands.update_post'].call(id, r.params).to_h
-      end
-
-      r.delete do
-        Blog::Container['commands.delete_post'].call(id).to_h
+      r.is "comments" do
+        r.post do
+          r.response.status = 201
+          Blog::Container['commands.create_comment'].call(id, r.params).to_h
+        end
       end
     end
   end
