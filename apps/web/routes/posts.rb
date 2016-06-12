@@ -14,7 +14,9 @@ class Blog::Application < Dry::Web::Application
     r.on :id do |id|
       r.is do
         r.get do
-          Blog::Container['commands.fetch_post'].call(id).to_h
+          Blog::Container['commands.fetch_post'].call(id).to_h.inject({}) do |h,(k,v)|
+            h[k] = (v.is_a?(Array) ? v.map(&:to_h) : v); h
+          end
         end
 
         r.put do

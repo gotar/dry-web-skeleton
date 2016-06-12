@@ -5,10 +5,14 @@ module Persistence
         attribute :id, Types::Serial
         attribute :title, Types::String
         attribute :body, Types::String
+
+        associate do
+          many :comments
+        end
       end
 
       def by_id(id)
-        where(id: id)
+        where(posts__id: id)
       end
     end
   end

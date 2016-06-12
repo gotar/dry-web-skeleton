@@ -2,6 +2,7 @@ require 'web_helper'
 
 RSpec.describe "GET /posts/:id ", type: :request do
   include_context 'posts'
+  include_context 'comments'
 
   context "not existing record" do
     before { do_request(1) }
@@ -31,8 +32,24 @@ RSpec.describe "GET /posts/:id ", type: :request do
       expect(json_response_body).to eql({
         "id" => post.id,
         "title" => post.title,
-        "body" => post.body
+        "body" => post.body,
+        "comments" => []
       })
+    end
+  end
+
+  context "related comments" do
+    let!(:post) { create_post }
+    let!(:comment) { create_comment(post[:id]) }
+
+    it "returns them inside relation" do
+      do_request(post[:id])
+
+      expect(json_response_body["comments"]).to eql([{
+        "id" => comment[:id],
+        "post_id" => post[:id],
+        "body" => "test comment"
+      }])
     end
   end
 
