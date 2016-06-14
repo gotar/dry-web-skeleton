@@ -17,6 +17,7 @@ gem "rom-support",    github: "rom-rb/rom-support"
 # Application dependencies
 gem 'rake'
 gem "dry-logic", github: "dryrb/dry-logic"
+gem "dry-types", github: "dryrb/dry-types"
 gem "dry-validation", github: "dryrb/dry-validation"
 gem "dry-auto_inject", github: "dryrb/dry-auto_inject"
 gem "dry-component", github: "dryrb/dry-component"

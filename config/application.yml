@@ -1,4 +1,4 @@
 development:
-  DATABASE_URL: 'postgres://localhost/blog_dev'
+  database_url: 'postgres://localhost/blog_dev'
 test:
-  DATABASE_URL: 'postgres://localhost/blog_test'
+  database_url: 'postgres://localhost/blog_test'
