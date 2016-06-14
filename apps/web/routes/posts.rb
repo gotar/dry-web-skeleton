@@ -1,4 +1,4 @@
-class Blog::Application < Dry::Web::Application
+class Blog::Application < Dry::Web::Roda::Application
   route "posts" do |r|
     r.is do
       r.get do

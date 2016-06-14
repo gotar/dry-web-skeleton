@@ -1,16 +1,18 @@
 GIT
-  remote: git://github.com/dry-rb/dry-web.git
-  revision: e561c5f80634deee446ddd1b8b4140e93b5a1ca3
+  remote: git://github.com/dry-rb/dry-web-roda.git
+  revision: e9b44ef1a1ef99dcfee389963362d8de238598c8
   specs:
-    dry-web (0.1.0)
-      dry-component (~> 0)
+    dry-web-roda (0.1.0)
       dry-configurable (~> 0.1)
-      dry-equalizer (~> 0.2)
-      dry-transaction (~> 0.5)
-      dry-view (~> 0.1)
-      inflecto (~> 0)
-      roda (~> 2.7)
-      tilt (~> 2.0)
+      roda (~> 2.14)
+      roda-flow (~> 0.3)
+
+GIT
+  remote: git://github.com/dry-rb/dry-web.git
+  revision: 9dba9c061c06ecd383e2aabbdbefcafb93a7d0e4
+  specs:
+    dry-web (0.2.0)
+      dry-component (~> 0)
 
 GIT
   remote: git://github.com/dryrb/dry-auto_inject.git
@@ -21,17 +23,25 @@ GIT
 
 GIT
   remote: git://github.com/dryrb/dry-component.git
-  revision: 70578f062a04196ba57cdabbc7fcabaad14d9593
+  revision: bd56097a58f2f962d999e0d4e6b4068f5f49cb3c
   specs:
-    dry-component (0.1.0)
+    dry-component (0.2.0)
       dry-auto_inject (~> 0.3)
       dry-configurable (~> 0.1)
       dry-container (~> 0.3, >= 0.3.4)
       inflecto (>= 0.0.2)
 
 GIT
+  remote: git://github.com/dryrb/dry-logic.git
+  revision: 2f26dfd2cbf5f84de023664cf7572b22becffa17
+  specs:
+    dry-logic (0.2.3)
+      dry-container (~> 0.2, >= 0.2.6)
+      dry-equalizer (~> 0.2)
+
+GIT
   remote: git://github.com/dryrb/dry-validation.git
-  revision: 3e642eba5b42bfd776814f8e0ebe9728f25c4795
+  revision: 8329e0bb7a1c26ffb3c7cff2a42b83fb2ad236a1
   specs:
     dry-validation (0.7.4)
       concurrent-ruby (~> 1.0)
@@ -52,10 +62,9 @@ GIT
 
 GIT
   remote: git://github.com/rom-rb/rom-repository.git
-  revision: 37ec20210a66da4e4c36b2b72517743cc1776930
+  revision: 6df83fbaa79e0406e7fbf2ce9582ca2280a73ea9
   specs:
     rom-repository (0.3.0)
-      anima (~> 0.2, >= 0.2)
       concurrent-ruby (~> 1.0)
       rom (~> 2.0)
       rom-mapper (~> 0.3.0)
@@ -82,9 +91,10 @@ GIT
 
 GIT
   remote: git://github.com/rom-rb/rom.git
-  revision: 9b30e3b516be12224148434c75ae1d9223fbfccb
+  revision: cc6df90a5ce18ddc41059d0f75aeb9e8b0549951
   specs:
     rom (2.0.0)
+      concurrent-ruby (~> 1.0)
       dry-equalizer (~> 0.2)
       dry-types (~> 0.7)
       rom-mapper (~> 0.3.0)
@@ -93,14 +103,6 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
-    abstract_type (0.0.7)
-    adamantium (0.2.0)
-      ice_nine (~> 0.11.0)
-      memoizable (~> 0.4.0)
-    anima (0.3.0)
-      abstract_type (~> 0.0.7)
-      adamantium (~> 0.2)
-      equalizer (~> 0.0.11)
     concurrent-ruby (1.0.2)
     database_cleaner (1.5.3)
     diff-lcs (1.2.5)
@@ -110,14 +112,7 @@ GEM
       concurrent-ruby (~> 1.0)
       dry-configurable (~> 0.1, >= 0.1.3)
     dry-equalizer (0.2.0)
-    dry-logic (0.2.3)
-      dry-container (~> 0.2, >= 0.2.6)
-      dry-equalizer (~> 0.2)
     dry-monads (0.0.1)
-    dry-transaction (0.7.0)
-      dry-container (>= 0.2.8)
-      dry-monads (~> 0.0.1)
-      wisper (>= 1.6.0)
     dry-types (0.7.2)
       concurrent-ruby (~> 1.0)
       dry-configurable (~> 0.1)
@@ -126,23 +121,15 @@ GEM
       dry-logic (~> 0.2, >= 0.2.3)
       dry-monads (>= 0.0.1)
       inflecto (~> 0.0.0, >= 0.0.2)
-    dry-view (0.1.0)
-      dry-configurable (~> 0.1)
-      dry-equalizer (~> 0.2)
-      inflecto (~> 0)
-      tilt (~> 2.0)
-    equalizer (0.0.11)
-    ice_nine (0.11.2)
     inflecto (0.0.2)
-    memoizable (0.4.2)
-      thread_safe (~> 0.3, >= 0.3.1)
     pg (0.18.4)
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
-    rake (11.1.2)
-    roda (2.14.0)
+    rake (11.2.2)
+    roda (2.15.0)
       rack
+    roda-flow (0.3.0)
     rspec (3.4.0)
       rspec-core (~> 3.4.0)
       rspec-expectations (~> 3.4.0)
@@ -157,8 +144,6 @@ GEM
       rspec-support (~> 3.4.0)
     rspec-support (3.4.1)
     sequel (4.35.0)
-    thread_safe (0.3.5)
-    tilt (2.0.5)
     transproc (0.4.0)
     wisper (1.6.1)
 
@@ -169,8 +154,10 @@ DEPENDENCIES
   database_cleaner
   dry-auto_inject!
   dry-component!
+  dry-logic!
   dry-validation!
   dry-web!
+  dry-web-roda!
   pg
   rack-test
   rake

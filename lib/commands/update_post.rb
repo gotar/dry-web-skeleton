@@ -2,7 +2,7 @@ require 'blog/import'
 
 module Commands
   class UpdatePost
-    include Blog::Import('validations.post_validator', 'persistence.repo.posts')
+    include Blog::Import['validations.post_validator', 'persistence.repo.posts']
 
     def call(id, params)
       result = post_validator.call(params)

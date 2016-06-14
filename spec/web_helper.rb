@@ -2,7 +2,7 @@ require 'db_helper'
 
 require 'rack/test'
 
-require_relative '../core/boot'
+require_relative '../component/boot'
 
 module AppHelper
   def app

@@ -1,4 +1,4 @@
-class Blog::Application < Dry::Web::Application
+class Blog::Application < Dry::Web::Roda::Application
   plugin :heartbeat, path: '/status'
 
   route '' do |r|

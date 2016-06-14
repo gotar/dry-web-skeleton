@@ -3,7 +3,7 @@ module Persistence
     class Comments < ROM::Relation[:sql]
       schema(:comments) do
         attribute :id, Types::Serial
-        attribute :post_id, Types::Serial
+        attribute :post_id, Types::ForeignKey(:posts)
         attribute :body, Types::String
 
         associate do

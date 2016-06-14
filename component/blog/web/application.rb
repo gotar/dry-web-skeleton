@@ -1,9 +1,11 @@
-require 'dry/web/application'
+require 'dry/web/roda/application'
+require_relative '../container'
 
 module Blog
   InvalidParams = Class.new(StandardError)
 
-  class Application < Dry::Web::Application
+  class Application < Dry::Web::Roda::Application
+    plugin :all_verbs
     plugin :json
     plugin :error_handler
 

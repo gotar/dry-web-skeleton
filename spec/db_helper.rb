@@ -1,5 +1,5 @@
 require_relative "spec_helper"
-require_relative '../core/blog/container'
+require_relative '../component/blog/container'
 
 Blog::Container.boot!(:rom)
 
