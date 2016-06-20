@@ -3,8 +3,8 @@ require "dry-validation"
 module Validations
   class CommentValidator
     CommentSchema = Dry::Validation.Form do
-      required(:post_id).filled(:int?)
-      required(:body).filled(:str?)
+      required(:post_id, :int).filled
+      required(:body, :str).filled
     end
 
     def call(args)
