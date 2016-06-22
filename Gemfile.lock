@@ -1,11 +1,13 @@
 GIT
   remote: git://github.com/dry-rb/dry-web-roda.git
-  revision: e9b44ef1a1ef99dcfee389963362d8de238598c8
+  revision: 81554148b8690b40706698ab1b753ba6855f5654
   specs:
     dry-web-roda (0.1.0)
       dry-configurable (~> 0.1)
+      inflecto (~> 0.0)
       roda (~> 2.14)
       roda-flow (~> 0.3)
+      thor (~> 0.19)
 
 GIT
   remote: git://github.com/dry-rb/dry-web.git
@@ -151,6 +153,7 @@ GEM
       rspec-support (~> 3.4.0)
     rspec-support (3.4.1)
     sequel (4.35.0)
+    thor (0.19.1)
     transproc (0.4.0)
     wisper (1.6.1)
 
