@@ -1,4 +1,0 @@
-development:
-  database_url: 'postgres://localhost/blog_dev'
-test:
-  database_url: 'postgres://localhost/blog_test'

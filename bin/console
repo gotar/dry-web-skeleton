@@ -1,8 +1,0 @@
-#!/usr/bin/env ruby
-
-require "bundler/setup"
-require "dry/web/console"
-
-require_relative "../component/boot"
-
-Dry::Web::Console.start
